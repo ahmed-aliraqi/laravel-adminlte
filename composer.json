@@ -1,0 +1,26 @@
+{
+  "name": "ahmed-aliraqi/laravel-adminlte",
+  "description": "An easy way to integrate AdminLTE into your laravel applications.",
+  "keywords": ["laravel", "adminlte", "dashboard", "admin", "administrator"],
+  "require": {
+    "php": "^7.0",
+    "illuminate/support": "5.*",
+    "laracasts/flash": "^3.0",
+    "davejamesmiller/laravel-breadcrumbs": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AhmedAliraqi\\Adminlte\\": "src/"
+    },
+    "files": [
+      "src/Support/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AhmedAliraqi\\AdminLte\\AdminLteServiceProvider"
+      ]
+    }
+  }
+}
