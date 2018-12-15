@@ -19,7 +19,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "AhmedAliraqi\\Adminlte\\AdminLteServiceProvider"
+        "AhmedAliraqi\\Adminlte\\AdminlteServiceProvider"
       ]
     }
   }
