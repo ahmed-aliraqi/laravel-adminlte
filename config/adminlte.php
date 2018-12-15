@@ -10,7 +10,7 @@ return [
         /*
          * The direction of the dashboard.
          */
-        'dir' => 'rtl',
+        'dir' => 'ltr',
         /*
          * The header items that will be rendered.
          */
