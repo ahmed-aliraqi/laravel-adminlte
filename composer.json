@@ -2,6 +2,14 @@
   "name": "ahmed-aliraqi/laravel-adminlte",
   "description": "An easy way to integrate AdminLTE into your laravel applications.",
   "keywords": ["laravel", "adminlte", "dashboard", "admin", "administrator"],
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahmed Fathy",
+      "email": "aliraqi.dev@gmail.com"
+    }
+  ],
   "require": {
     "php": "^7.0",
     "illuminate/support": "5.*",
