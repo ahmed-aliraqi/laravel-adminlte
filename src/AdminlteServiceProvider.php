@@ -38,6 +38,7 @@ class AdminlteServiceProvider extends ServiceProvider
             $this->packagePath('resources/stubs/auth/register.blade.php.stub') => base_path('resources/views/auth/register.blade.php'),
             $this->packagePath('resources/stubs/auth/passwords/email.blade.php.stub') => base_path('resources/views/auth/passwords/email.blade.php'),
             $this->packagePath('resources/stubs/auth/passwords/reset.blade.php.stub') => base_path('resources/views/auth/passwords/reset.blade.php'),
+            $this->packagePath('resources/stubs/auth/verify.blade.php.stub') => base_path('resources/views/auth/verify.blade.php'),
             $this->packagePath('resources/stubs/home.blade.php.stub') => base_path('resources/views/home.blade.php'),
         ], 'adminlte:auth');
 

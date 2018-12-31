@@ -24,15 +24,9 @@
 </head>
 <body class="hold-transition register-page">
 
-<div class="login-box">
-    {{--<div class="login-logo">--}}
-    {{--@lang('adminlte::dashboard.auth.verify.title')--}}
-    {{--</div>--}}
-
-</div><!-- /.login-box -->
 <div class="container">
     <div class="row justify-content-center">
-        <div class="panel panel-default">
+        <div class="panel panel-default verify-panel">
             <div class="panel-heading">@lang('adminlte::dashboard.auth.verify.title')</div>
 
             <div class="panel-body">
