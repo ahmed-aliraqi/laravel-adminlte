@@ -4,6 +4,7 @@ namespace AhmedAliraqi\Adminlte;
 
 use Illuminate\Support\ServiceProvider;
 use AhmedAliraqi\Adminlte\Commands\InstallCommand;
+use AhmedAliraqi\Adminlte\Console\Commands\BreadcrumbMakeCommand;
 
 class AdminlteServiceProvider extends ServiceProvider
 {
@@ -45,6 +46,7 @@ class AdminlteServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallCommand::class,
+                BreadcrumbMakeCommand::class,
             ]);
         }
     }

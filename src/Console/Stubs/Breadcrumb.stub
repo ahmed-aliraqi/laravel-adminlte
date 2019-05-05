@@ -1,0 +1,25 @@
+<?php
+
+// Home / DummyBluralName
+Breadcrumbs::register('dashboard.DummyBluralName.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('dashboard.home');
+    $breadcrumbs->push(trans('DummyBluralName.plural'), route('dashboard.DummyBluralName.index'));
+});
+
+// Home / DummyBluralName / create
+Breadcrumbs::register('dashboard.DummyBluralName.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('dashboard.DummyBluralName.index');
+    $breadcrumbs->push(trans('DummyBluralName.actions.create'), route('dashboard.DummyBluralName.create'));
+});
+
+// Home / DummyBluralName / {DummySingularName}
+Breadcrumbs::register('dashboard.DummyBluralName.show', function ($breadcrumbs, $DummySingularName) {
+    $breadcrumbs->parent('dashboard.DummyBluralName.index');
+    $breadcrumbs->push($DummySingularName->name, route('dashboard.DummyBluralName.show', $DummySingularName));
+});
+
+// Home / DummyBluralName / {DummySingularName} / edit
+Breadcrumbs::register('dashboard.DummyBluralName.edit', function ($breadcrumbs, $DummySingularName) {
+    $breadcrumbs->parent('dashboard.DummyBluralName.show', $DummySingularName);
+    $breadcrumbs->push(trans('DummyBluralName.actions.edit'), route('dashboard.DummyBluralName.edit', $DummySingularName));
+});

@@ -13,6 +13,7 @@
   "require": {
     "php": "^7.0",
     "illuminate/support": "5.*",
+    "illuminate/console": "5.*",
     "laracasts/flash": "^3.0",
     "davejamesmiller/laravel-breadcrumbs": "^5.0"
   },
