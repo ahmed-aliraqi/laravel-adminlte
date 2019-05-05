@@ -124,6 +124,49 @@ Example:
 Notes:
 > The options `sub_title` and `breadcrumb` are optional.
 
+> If you want to generate 'breadcrumb' file you should use `make:breadcrumb` command.
+```
+php artisan make:breadcrumb articles
+```
+```
+<?php
+
+// Home / articles
+Breadcrumbs::register('dashboard.articles.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('dashboard.home');
+    $breadcrumbs->push(trans('articles.plural'), route('dashboard.articles.index'));
+});
+
+// Home / articles / create
+Breadcrumbs::register('dashboard.articles.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('dashboard.articles.index');
+    $breadcrumbs->push(trans('articles.actions.create'), route('dashboard.articles.create'));
+});
+
+// Home / articles / {article}
+Breadcrumbs::register('dashboard.articles.show', function ($breadcrumbs, $article) {
+    $breadcrumbs->parent('dashboard.articles.index');
+    $breadcrumbs->push($article->name, route('dashboard.articles.show', $article));
+});
+
+// Home / articles / {article} / edit
+Breadcrumbs::register('dashboard.articles.edit', function ($breadcrumbs, $article) {
+    $breadcrumbs->parent('dashboard.articles.show', $article);
+    $breadcrumbs->push(trans('articles.actions.edit'), route('dashboard.articles.edit', $article));
+});
+```
+> You should include `routes/breadcrumbs/articles.php` in `routes/breadcrumbs.php` file or include all files in `routes/breadcrumbs` directory 
+```
+<?php
+
+// routes/breadcrumbs.php
+
+// Register all created breadcrumbs.
+foreach (glob(__DIR__.'/breadcrumbs/*.php') as $breadcrumb) {
+    require $breadcrumb;
+}
+```
+
 > The page component is responsible for displaying the [flash messages](https://github.com/laracasts/flash).
 
 > The BREADCRMB_NAME is the name of your [defined breadcrumb](https://github.com/davejamesmiller/laravel-breadcrumbs#2-define-your-breadcrumbs) in `routes/breadcrumbs.php` file.
