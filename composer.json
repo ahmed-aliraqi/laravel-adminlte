@@ -17,6 +17,12 @@
     "laracasts/flash": "^3.0",
     "davejamesmiller/laravel-breadcrumbs": "^5.3"
   },
+  "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/ahmed-aliraqi/laravel-adminlte"
+        }
+    ],
   "autoload": {
     "psr-4": {
       "AhmedAliraqi\\Adminlte\\": "src/"
