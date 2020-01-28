@@ -20,7 +20,7 @@
   "repositories": [
         {
             "type": "composer",
-            "url":  "https://github.com/ahmed-aliraqi/laravel-adminlte"
+            "url":  "http://packages.laraeast.com"
         }
     ],
   "autoload": {
