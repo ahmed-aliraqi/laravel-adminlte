@@ -17,12 +17,6 @@
     "laracasts/flash": "^3.0",
     "davejamesmiller/laravel-breadcrumbs": "^5.3"
   },
-  "repositories": [
-        {
-            "type": "composer",
-            "url":  "http://packages.laraeast.com"
-        }
-    ],
   "autoload": {
     "psr-4": {
       "AhmedAliraqi\\Adminlte\\": "src/"
